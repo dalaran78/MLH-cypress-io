@@ -7,6 +7,7 @@ const elements = {
   "radioButtons": ".ant-radio",
   "radioButtonsLabel": ".ant-radio-wrapper",
   "age": "#age",
+  "ageLabel": "label[for=\"age\"].ant-form-item-required",
   "storyType": ".ant-select-selector",
   "storyDropdown": ".ant-select-dropdown-placement-bottomLeft",
   "storyList": ".ant-select-item",

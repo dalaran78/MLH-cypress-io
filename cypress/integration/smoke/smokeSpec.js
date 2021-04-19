@@ -26,6 +26,7 @@ describe('SMOKE TESTS SUITE', () => {
               const label = nameLabel.find('[for="name"]').text();
               expect(label).to.equal(exp.nameLabel);
           });
+
       });
 
       it('TC-005 Name field is present',  () => {
@@ -49,14 +50,12 @@ describe('SMOKE TESTS SUITE', () => {
       });
 
       it('TC-007-3 Gender "it" radio button is present', () => {
-        cy.get('[type="radio"]').check('it');
+          cy.get('[type="radio"]').check('it');
       });
-
-
-      // it('TC-008 Age field label is present', () => {
-      //     let label = $$(sel.requiredLabel)[2].isDisplayed();
-      //     expect(label).toEqual(true);
-      // });
+      
+      it.only('TC-008 Age field label is present', () => {
+          cy.get(sel.ageLabel).should('be.visible');
+      });
       //
       // it('TC-009 Age field is present', () => {
       //     let age = $(sel.age).isDisplayed();
