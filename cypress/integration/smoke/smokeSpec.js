@@ -22,15 +22,15 @@ describe('SMOKE TESTS SUITE', () => {
       });
 
       it('TC-004 Name field label is present', () => {
-          cy.get(sel.name).should('be.visible');
+          cy.get(sel.nameLabel).should('be.visible');
       });
 
       it('TC-005 Name field is present',  () => {
-          cy.get(sel.name).should('be.visible');
+          cy.get(sel.nameField).should('be.visible');
       });
 
       it('TC-006 Gender field label is present', () => {
-          cy.get(sel.gender).should('be.visible');
+          cy.get(sel.genderLabel).should('be.visible');
       });
 
       it('TC-007-1 Gender "he" radio button is present', () => {
@@ -46,7 +46,7 @@ describe('SMOKE TESTS SUITE', () => {
       });
       
       it('TC-008 Age field label is present', () => {
-          cy.get(sel.age).should('be.visible');
+          cy.get(sel.ageField).should('be.visible');
       });
       //
       // it('TC-009 Age field is present', () => {
