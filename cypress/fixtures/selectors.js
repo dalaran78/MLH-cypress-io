@@ -1,5 +1,6 @@
 const elements = {
   "header": "h3",
+  "heroForm": ".hero__form",
   "instruction": "p",
   "requiredLabel": ".ant-form-item-required",
   "nameField": "#name",
