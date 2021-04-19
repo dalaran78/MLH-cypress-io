@@ -17,31 +17,26 @@ describe('SMOKE TESTS SUITE',  () => {
             cy.get(sel.heroForm).find(sel.instruction).should('contain', exp.instruction);
         });
 
-        // it('TC-017 Name field label is "1. What\'s your Hero\'s name?"', function () {
-        //     let label = $$(sel.requiredLabel)[0].getText();
-        //     expect(label).toEqual(exp.nameLabel);
-        // });
-        //
-        // it('TC-018 Gender field label is "2. Please choose a gender."', function () {
-        //     let label = $$(sel.requiredLabel)[1].getText();
-        //     expect(label).toEqual(exp.genderLabel);
-        // });
-        //
-        // it('TC-019 Radio button #1 named "he"', function () {
-        //     let buttonHe = $$(sel.radioButtonsLabel)[0].getText();
-        //     expect(buttonHe).toEqual(exp.heLabel);
-        // });
-        //
-        // it('TC-020 Radio button #2 named "she"', function () {
-        //     let buttonShe = $$(sel.radioButtonsLabel)[1].getText();
-        //     expect(buttonShe).toEqual(exp.sheLabel);
-        // });
-        //
-        // it('TC-021 Radio button #3 named "it"', function () {
-        //     let buttonIt = $$(sel.radioButtonsLabel)[2].getText();
-        //     expect(buttonIt).toEqual(exp.itLabel);
-        // });
-        //
+        it('TC-017 Name field label is "1. What\'s your Hero\'s name?"', function () {
+            cy.get(sel.heroForm).find(sel.requiredLabel).should('contain', exp.nameLabel);
+        });
+
+        it('TC-018 Gender field label is "2. Please choose a gender."', function () {
+            cy.get(sel.heroForm).find(sel.requiredLabel).should('contain', exp.genderLabel);
+        });
+
+        it('TC-019 Radio button #1 named "he"', function () {
+            cy.get(sel.heroForm).find(sel.radioButtonsLabel).should('contain', exp.heLabel);
+        });
+
+        it('TC-020 Radio button #2 named "she"', function () {
+            cy.get(sel.heroForm).find(sel.radioButtonsLabel).should('contain', exp.sheLabel);
+        });
+
+        it('TC-021 Radio button #3 named "it"', function () {
+            cy.get(sel.heroForm).find(sel.radioButtonsLabel).should('contain', exp.itLabel);
+        });
+
         // /* commented until bug fix, see JIRA bug ticket QA8-1306
         //
         // it('TC-022 Age field label is "3. How old is your Hero?"', function () {
