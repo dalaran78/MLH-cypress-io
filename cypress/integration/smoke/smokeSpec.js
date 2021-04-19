@@ -40,21 +40,19 @@ describe('SMOKE TESTS SUITE', () => {
 
       });
 
-      // it('TC-007.a Gender radio button 1 is present', () => {
-      //     let buttonHe = $$(sel.radioButtons)[0].isDisplayed();
-      //     expect(buttonHe).toEqual(true);
-      // });
-      //
-      // it('TC-007.b Gender radio button 2 is present', () => {
-      //     let buttonShe = $$(sel.radioButtons)[1].isDisplayed();
-      //     expect(buttonShe).toEqual(true);
-      // });
-      //
-      // it('TC-007.c Gender radio button 3 is present', () => {
-      //     let buttonIt = $$(sel.radioButtons)[2].isDisplayed();
-      //     expect(buttonIt).toEqual(true);
-      // });
-      //
+      it('TC-007-1 Gender "he" radio button is present', () => {
+          cy.get('[type="radio"]').check('he');
+      });
+
+      it('TC-007-2 Gender "she" radio button is present', () => {
+        cy.get('[type="radio"]').check('she');
+      });
+
+      it('TC-007-3 Gender "it" radio button is present', () => {
+        cy.get('[type="radio"]').check('it');
+      });
+
+
       // it('TC-008 Age field label is present', () => {
       //     let label = $$(sel.requiredLabel)[2].isDisplayed();
       //     expect(label).toEqual(true);
