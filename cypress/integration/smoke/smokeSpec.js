@@ -22,23 +22,15 @@ describe('SMOKE TESTS SUITE', () => {
       });
 
       it('TC-004 Name field label is present', () => {
-          cy.contains('form', exp.nameLabel).then( nameLabel => {
-              const label = nameLabel.find('[for="name"]').text();
-              expect(label).to.equal(exp.nameLabel);
-          });
-
+          cy.get(sel.name).should('be.visible');
       });
 
       it('TC-005 Name field is present',  () => {
           cy.get(sel.name).should('be.visible');
       });
 
-      it('TC-006 Gender label is present', () => {
-          cy.contains('form', exp.genderLabel).then( genderLabel => {
-              const label = genderLabel.find('[for="gender"]').text();
-              expect(label).to.equal(exp.genderLabel);
-          });
-
+      it('TC-006 Gender field label is present', () => {
+          cy.get(sel.gender).should('be.visible');
       });
 
       it('TC-007-1 Gender "he" radio button is present', () => {
@@ -53,8 +45,8 @@ describe('SMOKE TESTS SUITE', () => {
           cy.get('[type="radio"]').check('it');
       });
       
-      it.only('TC-008 Age field label is present', () => {
-          cy.get(sel.ageLabel).should('be.visible');
+      it('TC-008 Age field label is present', () => {
+          cy.get(sel.age).should('be.visible');
       });
       //
       // it('TC-009 Age field is present', () => {
