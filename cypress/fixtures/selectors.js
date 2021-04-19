@@ -7,6 +7,7 @@ const elements = {
   "nameLabel": 'label[for="name"].ant-form-item-required',
   "namePlaceholderAttr": "placeholder",
   "radioButtons": ".ant-radio",
+  "radioButtonType": '[type="radio"]',
   "radioButtonsLabel": ".ant-radio-wrapper",
   "ageField": "#age",
   "storyType": ".ant-select-selector",

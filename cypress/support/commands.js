@@ -1,9 +1,9 @@
-import sel from "../fixtures/selectors";
-
-Cypress.Commands.add('login', (username, password) =>{
-    cy.get(sel.username).type(username);
-    cy.get(sel.password).type(password);
-});
+// import sel from "../fixtures/selectors";
+//
+// Cypress.Commands.add('login', (username, password) =>{
+//     cy.get(sel.username).type(username);
+//     cy.get(sel.password).type(password);
+// });
 
 
 // ***********************************************

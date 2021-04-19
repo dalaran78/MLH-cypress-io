@@ -1,6 +1,6 @@
 {
   "baseUrl" : "https://qa-apps.netlify.app/hero/fix",
-  "ignoreTestFiles": "**/smoke/smokeSpec.js",
+  "ignoreTestFiles": "**/!(functional).js",
   "viewportHeight": 1000,
   "viewportWidth": 660
 }
