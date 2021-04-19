@@ -33,6 +33,7 @@ const elements = {
   "genderInput": ".ant-radio-input",
   "genderElem": "#gender label",
   "genderSelected": "ant-radio-wrapper-checked",
+  "storyLabel": 'label[for="story"].ant-form-item-required',
   "storyCardTitle": "h4",
   "storyCardText": ".card-text"
 };

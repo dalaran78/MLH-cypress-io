@@ -48,16 +48,14 @@ describe('SMOKE TESTS SUITE', () => {
       it('TC-008 Age field label is present', () => {
           cy.get(sel.ageField).should('be.visible');
       });
-      //
-      // it('TC-009 Age field is present', () => {
-      //     let age = $(sel.age).isDisplayed();
-      //     expect(age).toEqual(true);
-      // });
-      //
-      // it('TC-010 Story type field label is present', () => {
-      //     let label = $$(sel.requiredLabel)[3].isDisplayed();
-      //     expect(label).toEqual(true);
-      // });
+
+      it('TC-009 Age field is present', () => {
+          cy.get(sel.ageField).should('be.visible');
+      });
+
+      it('TC-010 Story type field label is present', () => {
+          cy.get(sel.storyLabel).should('be.visible');
+      });
       //
       // it('TC-011 Story type dropdown is present', () => {
       //     let dropdown = $(sel.storyType).isDisplayed();
