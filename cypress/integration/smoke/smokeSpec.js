@@ -1,5 +1,5 @@
 import sel from '../../fixtures/selectors';
-//import exp from '../../data/expected.json';
+import exp from '../../fixtures/expected.json';
 
 describe('SMOKE TESTS SUITE', () => {
 
@@ -19,6 +19,17 @@ describe('SMOKE TESTS SUITE', () => {
 
       it('TC-003 Instruction is present', () => {
           cy.get(sel.instruction).should('be.visible');
+      });
+
+      it('TC-004 Name field label is present', () => {
+          cy.contains('form', exp.nameLabel).then( nameLabel => {
+              const label = nameLabel.find('[for="name"]').text();
+              expect(label).to.equal(exp.nameLabel);
+          });
+      });
+
+      it('TC-005 Name field is present',  () => {
+          cy.get(sel.name).should('be.visible');
       });
 
   });
