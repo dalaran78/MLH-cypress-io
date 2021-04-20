@@ -49,30 +49,24 @@ describe('AGE FIELD SUITE', () => {
             cy.get(sel.ageField).invoke('attr', 'value').should('contain', exp.twelveDigits);
         });
 
-        // it('TC-072 Vertical input stepper should decrease age value by Arrow DOWN onkeypress event', ()=> {
-        //     $(sel.age).setValue(age.six);
-        //     browser.keys('\uE015');
-        //     let keyPressDown = $(sel.age).getValue();
-        //     expect(keyPressDown).toEqual(exp.keyDown);
-        // });
-        //
-        // it('TC-073 Paste function should accepts correct value', ()=> {
-        //     isPasteCorrect(age.twelve, age.selectAndCopy, age.paste);
-        //     let copyPaste = $(sel.age).getValue();
-        //     expect(copyPaste).toEqual(exp.twelveDigits);
-        // });
-        //
-        // it('TC-074 Paste function should not accepts value more than 12 digits', ()=> {
-        //     isPasteCorrect(age.max, age.selectAndCopy, age.paste);
-        //     let error = $(sel.error).waitForDisplayed({interval: 500});
-        //     expect(error).toEqual(true);
-        // });
-        //
-        // it('TC-075 Vertical input stepper should increase age value by UP onkeypress event', ()=> {
-        //     $(sel.age).setValue(age.six);
-        //     browser.keys('\uE013');
-        //     let keyPressUp = $(sel.age).getValue();
-        //     expect(keyPressUp).toEqual(exp.keyUp);
-        // });
+        it('TC-072 Vertical input stepper should decrease age value by Arrow DOWN onkeypress event', ()=> {
+            cy.get(sel.ageField).type(age.six);
+            cy.get(sel.ageField).type('{downarrow}');
+            cy.get(sel.ageField).invoke('attr', 'value').should('contain', exp.keyDown);
+        });
+
+         /* === COPY AND PASTE FEATURE NOT IMPLEMENTED IN CYPRESS YET ===
+        it.only('TC-073 Paste function should accepts correct value', ()=> {
+        });
+
+        it('TC-074 Paste function should not accepts value more than 12 digits', ()=> {
+        });
+        */
+
+        it('TC-075 Vertical input stepper should increase age value by Arrow UP onkeypress event', ()=> {
+            cy.get(sel.ageField).type(age.six);
+            cy.get(sel.ageField).type('{uparrow}');
+            cy.get(sel.ageField).invoke('attr', 'value').should('contain', exp.keyUp);
+        });
     });
 });

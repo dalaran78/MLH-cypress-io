@@ -43,7 +43,7 @@ const age = {
   "max" : '1234567890987',
   "six": '123456',
   "twelve" : '999999999999',
-  "selectAndCopy" : ['Meta', 'a', 'Meta', 'c'],
+  "selectAndCopy" : '{Meta+c, Meta+v}',
   "paste" : ['Meta', 'v'],
   "valueEwq": 'ewq',
   "valueAt": '@',

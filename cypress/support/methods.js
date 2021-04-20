@@ -22,10 +22,10 @@ function inputValues4(name, age) {
 // }
 //
 // function isPasteCorrect (age) {
-//     cy.get(sel.name).setValue();
-//     browser.keys(age);
-//     cy.get(sel.age).setValue();
-//     browser.keys(age);
+//     cy.get(sel.nameField).type('');
+//     cy.get(sel.ageField).type(age);
+//     cy.get(sel.ageField).type('');
+//     cy.get(sel.ageField).type(age);
 // }
 //
 // function isTrimmed (age) {
