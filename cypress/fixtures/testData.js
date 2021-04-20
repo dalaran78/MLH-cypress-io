@@ -38,13 +38,11 @@ const gender = {
 };
 
 const age = {
-  "default": "0123456789",
+  "default": "1234567890",
   "min" : '1',
   "max" : '1234567890987',
   "six": '123456',
   "twelve" : '999999999999',
-  "selectAndCopy" : '{Meta+c, Meta+v}',
-  "paste" : ['Meta', 'v'],
   "valueEwq": 'ewq',
   "valueAt": '@',
   "valueDot": '.',

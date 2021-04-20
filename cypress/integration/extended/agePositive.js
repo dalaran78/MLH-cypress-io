@@ -1,7 +1,7 @@
 import sel from '../../fixtures/selectors';
 import exp from '../../fixtures/expected.json';
 import {age} from '../../fixtures/testData';
-import {isPasteCorrect} from '../../support/methods';
+// import {isPasteCorrect} from '../../support/methods';
 
 describe('AGE FIELD SUITE', () => {
 
