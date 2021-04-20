@@ -33,15 +33,15 @@ describe('SMOKE TESTS SUITE', () => {
       });
 
       it('TC-007-1 Gender "he" radio button is present', () => {
-          cy.get('[type="radio"]').check('he');
+          cy.get(sel.radioButtonType).check('he');
       });
 
       it('TC-007-2 Gender "she" radio button is present', () => {
-          cy.get('[type="radio"]').check('she');
+          cy.get(sel.radioButtonType).check('she');
       });
 
       it('TC-007-3 Gender "it" radio button is present', () => {
-          cy.get('[type="radio"]').check('it');
+          cy.get(sel.radioButtonType).check('it');
       });
       
       it('TC-008 Age field label is present', () => {

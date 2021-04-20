@@ -1,6 +1,6 @@
 {
   "baseUrl" : "https://qa-apps.netlify.app/hero/fix",
-  "ignoreTestFiles": "**/!(functional).js",
+  "ignoreTestFiles": "**/integration/*",
   "viewportHeight": 1000,
   "viewportWidth": 660
 }
