@@ -23,37 +23,32 @@ describe('AGE FIELD SUITE', () => {
             cy.reload()
         });
 
-        // it('TC-067 Vertical input stepper should increase age value to UP', () => {
-        //     $(sel.spanUP).click();
-        //     let stepperUP = $(sel.age).getValue();
-        //     expect(stepperUP).toEqual(exp.oneDigit);
-        // });
+        it('TC-067 Vertical input stepper should increase age value to UP', () => {
+            cy.get(sel.spanUP).click();
+            cy.get(sel.ageField).invoke('attr', 'value').should('contain', exp.oneDigit);
+        });
 
-        // it('TC-068 Vertical input stepper should decrease age value to DOWN', () => {
-        //     $(sel.age).setValue(age.six);
-        //     $(sel.spanDown).click();
-        //     let stepperDown = $(sel.age).getValue();
-        //     expect(stepperDown).toEqual(exp.keyDown);
-        // });
-        //
-        // it('TC-069 The Age input field should accepts 1 digit', () => {
-        //     $(sel.age).setValue(age.min);
-        //     let isOneDigit = $(sel.age).getValue();
-        //     expect(isOneDigit).toEqual(exp.oneDigit);
-        // });
-        //
-        // it('TC-070 The Age input field should accepts 6 digit', () => {
-        //     $(sel.age).setValue(age.six);
-        //     let isSixDigit = $(sel.age).getValue();
-        //     expect(isSixDigit).toEqual(exp.sixDigits);
-        // });
-        //
-        // it('TC-071 The Age input field should accepts 12 digit', () => {
-        //     $(sel.age).setValue(age.twelve);
-        //     let isTwelveDigit = $(sel.age).getValue();
-        //     expect(isTwelveDigit).toEqual(exp.twelveDigits);
-        // });
-        //
+        it('TC-068 Vertical input stepper should decrease age value to DOWN', () => {
+        cy.get(sel.ageField).type(age.six)
+        cy.get(sel.spanDown).click();
+        cy.get(sel.ageField).invoke('attr', 'value').should('contain', exp.keyDown);
+        });
+
+        it('TC-069 The Age input field should accepts 1 digit', () => {
+            cy.get(sel.ageField).type(age.min);
+            cy.get(sel.ageField).invoke('attr', 'value').should('contain', exp.oneDigit);
+        });
+
+        it('TC-070 The Age input field should accepts 6 digit', () => {
+            cy.get(sel.ageField).type(age.six);
+            cy.get(sel.ageField).invoke('attr', 'value').should('contain', exp.sixDigits);
+        });
+
+        it('TC-071 The Age input field should accepts 12 digit', () => {
+            cy.get(sel.ageField).type(age.twelve);
+            cy.get(sel.ageField).invoke('attr', 'value').should('contain', exp.twelveDigits);
+        });
+
         // it('TC-072 Vertical input stepper should decrease age value by Arrow DOWN onkeypress event', ()=> {
         //     $(sel.age).setValue(age.six);
         //     browser.keys('\uE015');

@@ -42,7 +42,7 @@ const age = {
   "min" : '1',
   "max" : '1234567890987',
   "six": '123456',
-  "twelve" : '123456789098',
+  "twelve" : '999999999999',
   "selectAndCopy" : ['Meta', 'a', 'Meta', 'c'],
   "paste" : ['Meta', 'v'],
   "valueEwq": 'ewq',
