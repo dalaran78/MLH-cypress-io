@@ -4,6 +4,7 @@
   "instruction": "Let's create your own HERO! It's super easy with our application!",
   "nameLabel": "1. What is your Hero's name?",
   "namePlaceholder": "Hero's name",
+  "agePlaceholder": "Hero's age",
   "genderLabel": "2. Please choose a gender.",
   "heLabel": "he",
   "sheLabel": "she",
