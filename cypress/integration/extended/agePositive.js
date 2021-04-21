@@ -55,7 +55,7 @@ describe('AGE FIELD SUITE', () => {
             cy.get(sel.ageField).invoke('attr', 'value').should('contain', exp.keyDown);
         });
 
-         /* === COPY AND PASTE FEATURE NOT IMPLEMENTED IN CYPRESS YET ===
+        /* === COPY AND PASTE FEATURE NOT IMPLEMENTED IN CYPRESS YET ===
         it.only('TC-073 Paste function should accepts correct value', ()=> {
         });
 
@@ -68,5 +68,7 @@ describe('AGE FIELD SUITE', () => {
             cy.get(sel.ageField).type('{uparrow}');
             cy.get(sel.ageField).invoke('attr', 'value').should('contain', exp.keyUp);
         });
+
     });
+
 });
