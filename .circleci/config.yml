@@ -23,7 +23,7 @@ jobs:
             - ~/.cache
       # start server before starting tests
       - run:
-          command: npm start
+          command: npx cypress open
           background: true
       - run: npm run e2e:record
 
